@@ -1,4 +1,4 @@
-<h1>Listing users</h1>
+<h1>Listando Usuarios</h1>
 
 <table>
   <thead>
@@ -19,9 +19,13 @@
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <% if @users.size == 0%>
+      usuarios no encontrados
+      <% end%>
   </tbody>
 </table>
 
 <br>
 
 <%= link_to 'New User', new_user_path %>
+<%= link_to 'Registrar', '/signup' %>
